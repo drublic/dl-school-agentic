@@ -1,0 +1,136 @@
+{
+  "corpus": {
+    "doc": "employee_handbook.pdf",
+    "version": "2024"
+  },
+  "indexName": "handbook",
+  "namespace": "workshop-shared",
+  "goldenQuestion": "How many remote work days per month are we allowed?",
+  "points": [
+    {
+      "id": "handbook-p12-remote-work",
+      "x": 0.028390755461507787,
+      "y": -0.10755322264049373,
+      "page": 12,
+      "section": "Remote Work",
+      "sectionId": "3.2",
+      "text": "§3.2 Remote Work Policy — Hybrid employees may work remotely up to 3 days per calendar month, with manager approval required. Requests must be submitted at least 5 business days in advance via the HR portal. Fully remote roles are exempt from the monthly day cap but must maintain core collaboration hours (10:00–15:00 local time).",
+      "dim": 1536
+    },
+    {
+      "id": "handbook-p11-office-attendance",
+      "x": 0.031384369454045644,
+      "y": -0.0703253303490619,
+      "page": 6,
+      "section": "Office Attendance",
+      "sectionId": "3.1",
+      "text": "§3.1 Office Attendance — All hybrid employees are expected in the office at least 2 days per week unless an approved remote-work exception applies. Team leads may set stricter team norms. Failure to meet attendance expectations may trigger a performance review.",
+      "dim": 1536
+    },
+    {
+      "id": "handbook-p18-pto",
+      "x": -0.09731059268421109,
+      "y": -0.03148509416105296,
+      "page": 13,
+      "section": "Paid Time Off",
+      "sectionId": "5.1",
+      "text": "§5.1 Paid Time Off (PTO) — Full-time employees accrue 20 PTO days per year. PTO requests require manager approval in Workday at least 2 weeks before start date for trips longer than 5 consecutive days. Unused PTO above 5 days rolls over to the next calendar year, capped at 10 days.",
+      "dim": 1536
+    },
+    {
+      "id": "handbook-p19-sick-leave",
+      "x": -0.1426414317422568,
+      "y": -0.043107217944159136,
+      "page": 14,
+      "section": "Sick Leave",
+      "sectionId": "5.2",
+      "text": "§5.2 Sick Leave — Employees receive 10 paid sick days per year. Sick leave does not require advance approval; notify your manager before 9:30 AM on the first day absent. A doctor's note is required for absences longer than 3 consecutive days.",
+      "dim": 1536
+    },
+    {
+      "id": "handbook-p24-expenses",
+      "x": 0.09729175750685405,
+      "y": -0.09527655927490321,
+      "page": 17,
+      "section": "Expense Reimbursement",
+      "sectionId": "6.3",
+      "text": "§6.3 Expense Reimbursement — Submit expenses within 30 days via Concur with receipts. Home office stipend: up to €50/month for internet when working remotely. Travel must be pre-approved for amounts over €500.",
+      "dim": 1536
+    },
+    {
+      "id": "handbook-p31-security",
+      "x": 0.11340590629100868,
+      "y": 0.050234431435452157,
+      "page": 19,
+      "section": "IT Security",
+      "sectionId": "8.1",
+      "text": "§8.1 IT Security — Company laptops must use full-disk encryption and MFA on all SSO apps. Do not store customer PII on personal devices. Report suspected phishing to security@ within 1 hour. VPN is required when accessing internal systems from public networks.",
+      "dim": 1536
+    },
+    {
+      "id": "handbook-p33-parental-leave",
+      "x": -0.1742792478414953,
+      "y": -0.016841707602246122,
+      "page": 20,
+      "section": "Parental Leave",
+      "sectionId": "9.1",
+      "text": "§9.1 Parental Leave — Primary caregivers receive 16 weeks paid parental leave. Secondary caregivers receive 6 weeks. Leave must be taken within 12 months of birth or adoption placement. Coordinate return dates with HR at least 4 weeks before end of leave.",
+      "dim": 1536
+    },
+    {
+      "id": "handbook-p40-conduct",
+      "x": 0.09335206231513014,
+      "y": 0.14360566689502824,
+      "page": 22,
+      "section": "Code of Conduct",
+      "sectionId": "11.2",
+      "text": "§11.2 Code of Conduct — Harassment, discrimination, and retaliation are prohibited. Report concerns to HR@ or the anonymous ethics hotline. All reports are investigated within 10 business days. Retaliation against reporters is grounds for termination.",
+      "dim": 1536
+    },
+    {
+      "id": "handbook-p7-welcome",
+      "x": 0.025794562806862067,
+      "y": 0.13740721511936904,
+      "page": 3,
+      "section": "Welcome",
+      "sectionId": "1.1",
+      "text": "§1.1 Welcome — This handbook applies to all full-time and part-time employees. Policies are effective January 1, 2024 unless otherwise noted. HR publishes updates on the intranet; employees are responsible for reviewing changes within 30 days.",
+      "dim": 1536
+    },
+    {
+      "id": "handbook-p22-benefits",
+      "x": -0.08042653229629397,
+      "y": 0.12814770338341555,
+      "page": 16,
+      "section": "Health Benefits",
+      "sectionId": "6.1",
+      "text": "§6.1 Health Benefits — Medical, dental, and vision coverage begins on the first day of the month after your start date. Open enrollment is each November. Dependents must be enrolled within 30 days of a qualifying life event.",
+      "dim": 1536
+    },
+    {
+      "id": "handbook-p28-equipment",
+      "x": 0.10503839072884939,
+      "y": -0.09480588486134763,
+      "page": 18,
+      "section": "Equipment",
+      "sectionId": "7.2",
+      "text": "§7.2 Equipment — Remote employees receive a laptop, monitor, and €200 home-office setup allowance once per role. Equipment remains company property. Return all hardware within 5 business days of offboarding.",
+      "dim": 1536
+    }
+  ],
+  "queryPoint": {
+    "x": 0.041134686641783574,
+    "y": -0.3113358743317072
+  },
+  "nearest": {
+    "id": "handbook-p12-remote-work",
+    "x": 0.028390755461507787,
+    "y": -0.10755322264049373,
+    "page": 12,
+    "section": "Remote Work",
+    "sectionId": "3.2",
+    "text": "§3.2 Remote Work Policy — Hybrid employees may work remotely up to 3 days per calendar month, with manager approval required. Requests must be submitted at least 5 business days in advance via the HR portal. Fully remote roles are exempt from the monthly day cap but must maintain core collaboration hours (10:00–15:00 local time).",
+    "dim": 1536,
+    "similarity": 0.7202294753968239
+  }
+}

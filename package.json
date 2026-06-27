@@ -1,0 +1,28 @@
+{
+  "name": "dl-agentic-workshop",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate:pdf": "python3 generate-handbook-pdf.py",
+    "seed": "node seed-handbook-vectors.mjs",
+    "visualize:vectors": "node visualize-handbook-vectors.mjs",
+    "example:handbook": "tsx example/rag/langchain-handbook-agent.ts",
+    "example:rag": "tsx example/rag/langchain-handbook-agent.ts",
+    "example:mcp": "tsx example/mcp/handbook-server.ts",
+    "example:mcp:demo": "tsx example/mcp/handbook-demo-client.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.72",
+    "@langchain/openai": "^0.6.9",
+    "@modelcontextprotocol/sdk": "^1.17.4",
+    "@pinecone-database/pinecone": "^6.1.4",
+    "openai": "^4.104.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  }
+}
