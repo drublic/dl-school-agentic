@@ -9,8 +9,8 @@
   "points": [
     {
       "id": "handbook-p12-remote-work",
-      "x": 0.028390755461507787,
-      "y": -0.10755322264049373,
+      "x": 0.028390732661289293,
+      "y": -0.10755322821277688,
       "page": 12,
       "section": "Remote Work",
       "sectionId": "3.2",
@@ -19,8 +19,8 @@
     },
     {
       "id": "handbook-p11-office-attendance",
-      "x": 0.031384369454045644,
-      "y": -0.0703253303490619,
+      "x": 0.031384354545771584,
+      "y": -0.0703253364595202,
       "page": 6,
       "section": "Office Attendance",
       "sectionId": "3.1",
@@ -29,8 +29,8 @@
     },
     {
       "id": "handbook-p18-pto",
-      "x": -0.09731059268421109,
-      "y": -0.03148509416105296,
+      "x": -0.09731059935873707,
+      "y": -0.03148507334846706,
       "page": 13,
       "section": "Paid Time Off",
       "sectionId": "5.1",
@@ -39,8 +39,8 @@
     },
     {
       "id": "handbook-p19-sick-leave",
-      "x": -0.1426414317422568,
-      "y": -0.043107217944159136,
+      "x": -0.14264144088055697,
+      "y": -0.04310718762058621,
       "page": 14,
       "section": "Sick Leave",
       "sectionId": "5.2",
@@ -49,8 +49,8 @@
     },
     {
       "id": "handbook-p24-expenses",
-      "x": 0.09729175750685405,
-      "y": -0.09527655927490321,
+      "x": 0.09729173730916478,
+      "y": -0.09527658049820734,
       "page": 17,
       "section": "Expense Reimbursement",
       "sectionId": "6.3",
@@ -59,8 +59,8 @@
     },
     {
       "id": "handbook-p31-security",
-      "x": 0.11340590629100868,
-      "y": 0.050234431435452157,
+      "x": 0.11340591694020806,
+      "y": 0.0502344071372867,
       "page": 19,
       "section": "IT Security",
       "sectionId": "8.1",
@@ -69,8 +69,8 @@
     },
     {
       "id": "handbook-p33-parental-leave",
-      "x": -0.1742792478414953,
-      "y": -0.016841707602246122,
+      "x": -0.1742792514117667,
+      "y": -0.016841670807804524,
       "page": 20,
       "section": "Parental Leave",
       "sectionId": "9.1",
@@ -79,8 +79,8 @@
     },
     {
       "id": "handbook-p40-conduct",
-      "x": 0.09335206231513014,
-      "y": 0.14360566689502824,
+      "x": 0.09335209275810737,
+      "y": 0.14360564755093513,
       "page": 22,
       "section": "Code of Conduct",
       "sectionId": "11.2",
@@ -89,8 +89,8 @@
     },
     {
       "id": "handbook-p7-welcome",
-      "x": 0.025794562806862067,
-      "y": 0.13740721511936904,
+      "x": 0.0257945919358303,
+      "y": 0.1374072098750976,
       "page": 3,
       "section": "Welcome",
       "sectionId": "1.1",
@@ -99,8 +99,8 @@
     },
     {
       "id": "handbook-p22-benefits",
-      "x": -0.08042653229629397,
-      "y": 0.12814770338341555,
+      "x": -0.08042650513024843,
+      "y": 0.1281477198362331,
       "page": 16,
       "section": "Health Benefits",
       "sectionId": "6.1",
@@ -109,8 +109,8 @@
     },
     {
       "id": "handbook-p28-equipment",
-      "x": 0.10503839072884939,
-      "y": -0.09480588486134763,
+      "x": 0.10503837063093839,
+      "y": -0.09480590745219002,
       "page": 18,
       "section": "Equipment",
       "sectionId": "7.2",
@@ -119,18 +119,18 @@
     }
   ],
   "queryPoint": {
-    "x": 0.041134686641783574,
-    "y": -0.3113358743317072
+    "x": 0.04119384343885077,
+    "y": -0.3112949471322416
   },
   "nearest": {
     "id": "handbook-p12-remote-work",
-    "x": 0.028390755461507787,
-    "y": -0.10755322264049373,
+    "x": 0.028390732661289293,
+    "y": -0.10755322821277688,
     "page": 12,
     "section": "Remote Work",
     "sectionId": "3.2",
     "text": "§3.2 Remote Work Policy — Hybrid employees may work remotely up to 3 days per calendar month, with manager approval required. Requests must be submitted at least 5 business days in advance via the HR portal. Fully remote roles are exempt from the monthly day cap but must maintain core collaboration hours (10:00–15:00 local time).",
     "dim": 1536,
-    "similarity": 0.7202294753968239
+    "similarity": 0.7201939951550425
   }
 }

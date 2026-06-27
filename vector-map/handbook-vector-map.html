@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Handbook vector map · handbook</title>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+    }
+    header {
+      padding: 1.25rem 1.5rem 0.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h1 { margin: 0 0 0.35rem; font-size: 1.35rem; }
+    p { margin: 0.25rem 0; color: #64748b; font-size: 0.95rem; }
+    #chart { width: 100%; height: calc(100vh - 170px); }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      padding: 0 1.5rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.8rem;
+      color: #475569;
+    }
+    .swatch {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      border: 1px solid #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Employee handbook · embedding map</h1>
+    <p>Pinecone index <strong>handbook</strong> · namespace <strong>workshop-shared</strong> · text-embedding-3-small (1536d → PCA 2D)</p>
+    <p>11 vectors from <code>employee_handbook.pdf</code> (2024). Hover for chunk text; star = golden test question.</p>
+  </header>
+  <div class="legend">
+    <span><i class="swatch" style="background:#dc2626"></i>Code of Conduct</span><span><i class="swatch" style="background:#ea580c"></i>Equipment</span><span><i class="swatch" style="background:#e11d48"></i>Expense Reimbursement</span><span><i class="swatch" style="background:#db2777"></i>Health Benefits</span><span><i class="swatch" style="background:#ca8a04"></i>IT Security</span><span><i class="swatch" style="background:#0891b2"></i>Office Attendance</span><span><i class="swatch" style="background:#7c3aed"></i>Paid Time Off</span><span><i class="swatch" style="background:#16a34a"></i>Parental Leave</span><span><i class="swatch" style="background:#0d9488"></i>Remote Work</span><span><i class="swatch" style="background:#9333ea"></i>Sick Leave</span><span><i class="swatch" style="background:#2563eb"></i>Welcome</span>
+  </div>
+  <div id="chart"></div>
+  <script>
+    const data = [{"type":"scatter","mode":"markers+text","name":"Handbook chunks","x":[0.028390732661289293,0.031384354545771584,-0.09731059935873707,-0.14264144088055697,0.09729173730916478,0.11340591694020806,-0.1742792514117667,0.09335209275810737,0.0257945919358303,-0.08042650513024843,0.10503837063093839],"y":[-0.10755322821277688,-0.0703253364595202,-0.03148507334846706,-0.04310718762058621,-0.09527658049820734,0.0502344071372867,-0.016841670807804524,0.14360564755093513,0.1374072098750976,0.1281477198362331,-0.09480590745219002],"text":["§3.2","§3.1","§5.1","§5.2","§6.3","§8.1","§9.1","§11.2","§1.1","§6.1","§7.2"],"textposition":"top center","textfont":{"color":"#334155","size":11},"marker":{"size":14,"color":["#0d9488","#0891b2","#7c3aed","#9333ea","#e11d48","#ca8a04","#16a34a","#dc2626","#2563eb","#db2777","#ea580c"],"line":{"color":"#ffffff","width":1.5}},"hovertemplate":["<b>§3.2 Remote Work</b><br>Page 12<br>§3.2 Remote Work Policy — Hybrid employees may work remotely up to 3 days per calendar month, with manager approval req…<br>id: handbook-p12-remote-work<extra></extra>","<b>§3.1 Office Attendance</b><br>Page 6<br>§3.1 Office Attendance — All hybrid employees are expected in the office at least 2 days per week unless an approved re…<br>id: handbook-p11-office-attendance<extra></extra>","<b>§5.1 Paid Time Off</b><br>Page 13<br>§5.1 Paid Time Off (PTO) — Full-time employees accrue 20 PTO days per year. PTO requests require manager approval in Wo…<br>id: handbook-p18-pto<extra></extra>","<b>§5.2 Sick Leave</b><br>Page 14<br>§5.2 Sick Leave — Employees receive 10 paid sick days per year. Sick leave does not require advance approval; notify yo…<br>id: handbook-p19-sick-leave<extra></extra>","<b>§6.3 Expense Reimbursement</b><br>Page 17<br>§6.3 Expense Reimbursement — Submit expenses within 30 days via Concur with receipts. Home office stipend: up to €50/mo…<br>id: handbook-p24-expenses<extra></extra>","<b>§8.1 IT Security</b><br>Page 19<br>§8.1 IT Security — Company laptops must use full-disk encryption and MFA on all SSO apps. Do not store customer PII on …<br>id: handbook-p31-security<extra></extra>","<b>§9.1 Parental Leave</b><br>Page 20<br>§9.1 Parental Leave — Primary caregivers receive 16 weeks paid parental leave. Secondary caregivers receive 6 weeks. Le…<br>id: handbook-p33-parental-leave<extra></extra>","<b>§11.2 Code of Conduct</b><br>Page 22<br>§11.2 Code of Conduct — Harassment, discrimination, and retaliation are prohibited. Report concerns to HR@ or the anony…<br>id: handbook-p40-conduct<extra></extra>","<b>§1.1 Welcome</b><br>Page 3<br>§1.1 Welcome — This handbook applies to all full-time and part-time employees. Policies are effective January 1, 2024 u…<br>id: handbook-p7-welcome<extra></extra>","<b>§6.1 Health Benefits</b><br>Page 16<br>§6.1 Health Benefits — Medical, dental, and vision coverage begins on the first day of the month after your start date.…<br>id: handbook-p22-benefits<extra></extra>","<b>§7.2 Equipment</b><br>Page 18<br>§7.2 Equipment — Remote employees receive a laptop, monitor, and €200 home-office setup allowance once per role. Equipm…<br>id: handbook-p28-equipment<extra></extra>"]},{"type":"scatter","mode":"markers+text","name":"Golden question","x":[0.04119384343885077],"y":[-0.3112949471322416],"text":["?"],"textposition":"middle center","marker":{"size":18,"color":"#f59e0b","symbol":"star","line":{"color":"#92400e","width":2}},"hovertemplate":"<b>Query</b><br>How many remote work days per month are we allowed?<br>Nearest: §3.2 Remote Work (0.720)<extra></extra>"},{"type":"scatter","mode":"lines","name":"Nearest match","x":[0.04119384343885077,0.028390732661289293],"y":[-0.3112949471322416,-0.10755322821277688],"line":{"color":"#d97706","width":2,"dash":"dot"},"hoverinfo":"skip"}];
+    const layout = {
+      paper_bgcolor: "#f8fafc",
+      plot_bgcolor: "#ffffff",
+      font: { color: "#1e293b" },
+      margin: { l: 48, r: 24, t: 24, b: 48 },
+      xaxis: {
+        title: "PC1",
+        zerolinecolor: "#cbd5e1",
+        gridcolor: "#e2e8f0",
+      },
+      yaxis: {
+        title: "PC2",
+        zerolinecolor: "#cbd5e1",
+        gridcolor: "#e2e8f0",
+      },
+      showlegend: true,
+      legend: { orientation: "h", y: 1.08, x: 0 },
+    };
+    Plotly.newPlot("chart", data, layout, { responsive: true, displayModeBar: true });
+  </script>
+</body>
+</html>

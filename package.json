@@ -3,11 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "generate:pdf": "python3 generate-handbook-pdf.py",
-    "seed": "node seed-handbook-vectors.mjs",
-    "visualize:vectors": "node visualize-handbook-vectors.mjs",
+    "generate:pdf": "python3 data/generate-handbook-pdf.py",
+    "seed": "node seed/seed-handbook-vectors.mjs",
+    "visualize:vectors": "node vector-map/visualize-handbook-vectors.mjs",
     "example:handbook": "tsx example/rag/langchain-handbook-agent.ts",
     "example:rag": "tsx example/rag/langchain-handbook-agent.ts",
+    "example:rag:deterministic": "tsx example/rag/deterministic-chain.ts",
     "example:mcp": "tsx example/mcp/handbook-server.ts",
     "example:mcp:demo": "tsx example/mcp/handbook-demo-client.ts",
     "typecheck": "tsc --noEmit"

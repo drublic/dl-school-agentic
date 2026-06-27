@@ -3,8 +3,8 @@
  * Embed handbook-corpus.json chunks and upsert to Pinecone.
  *
  * Usage:
- *   pnpm seed
- *   node seed-handbook-vectors.mjs
+ *   npm run seed
+ *   node seed/seed-handbook-vectors.mjs
  */
 
 import { readFileSync, existsSync } from "node:fs";
@@ -13,6 +13,7 @@ import { fileURLToPath } from "node:url";
 import { execSync } from "node:child_process";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = join(__dirname, "..");
 
 const INDEX_NAME = process.env.WORKSHOP_PINECONE_INDEX ?? "handbook";
 const NAMESPACE = process.env.WORKSHOP_PINECONE_NAMESPACE ?? "workshop-shared";
@@ -23,7 +24,7 @@ const EMBEDDING_DIM = 1536;
 
 function loadEnvLocal() {
   for (const name of [".env.local", ".env"]) {
-    const path = join(__dirname, name);
+    const path = join(ROOT, name);
     if (!existsSync(path)) continue;
     for (const line of readFileSync(path, "utf8").split("\n")) {
     const trimmed = line.trim();
@@ -47,7 +48,7 @@ function loadEnvLocal() {
 
 function loadCorpus() {
   return JSON.parse(
-    readFileSync(join(__dirname, "handbook-corpus.json"), "utf8"),
+    readFileSync(join(ROOT, "data/handbook-corpus.json"), "utf8"),
   );
 }
 
@@ -117,8 +118,8 @@ async function main() {
 
   if (!process.argv.includes("--skip-pdf")) {
     console.log("Regenerating employee_handbook.pdf…");
-    execSync("python3 generate-handbook-pdf.py", {
-      cwd: __dirname,
+    execSync("python3 data/generate-handbook-pdf.py", {
+      cwd: ROOT,
       stdio: "inherit",
     });
   }

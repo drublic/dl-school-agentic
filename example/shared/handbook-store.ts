@@ -17,7 +17,7 @@ const EMBEDDING_MODEL = "text-embedding-3-small";
 
 function loadCorpus(): HandbookCorpus {
   return JSON.parse(
-    readFileSync(join(ROOT, "handbook-corpus.json"), "utf8"),
+    readFileSync(join(ROOT, "data/handbook-corpus.json"), "utf8"),
   ) as HandbookCorpus;
 }
 

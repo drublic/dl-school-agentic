@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /**
- * RAG example — LangChain agent with in-process retrieval tools.
+ * Agentic RAG — LangChain agent with in-process retrieval tools.
  *
- * The LLM calls search_documents / get_document_by_id directly in your Node
- * process. Retrieval is augmented generation: embed query → Pinecone → answer.
+ * The model decides when to call search_documents / get_document_by_id.
+ * Contrast with deterministic-chain.ts (host always retrieves first).
  *
  * Usage:
  *   npm run example:rag
@@ -109,7 +109,7 @@ async function main(): Promise<void> {
   const llm = new ChatOpenAI({ model: "gpt-4o-mini" });
   const llmWithTools = llm.bindTools(tools);
 
-  console.log("Pattern: RAG (in-process LangChain tools + Pinecone)\n");
+  console.log("Pattern: Agentic RAG (model chooses tools + Pinecone)\n");
   console.log(`Question: ${question}\n`);
 
   const { answer } = await runAgent(llmWithTools, toolsByName, question);

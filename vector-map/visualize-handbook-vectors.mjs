@@ -2,9 +2,9 @@
 /**
  * Fetch handbook vectors from Pinecone and render a 2D PCA map (HTML).
  *
- * Usage (from repo root):
- *   pnpm --dir workshops visualize:vectors
- *   pnpm --dir workshops visualize:vectors -- --open
+ * Usage:
+ *   npm run visualize:vectors
+ *   npm run visualize:vectors -- --open
  */
 
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
@@ -13,6 +13,7 @@ import { fileURLToPath } from "node:url";
 import { execSync } from "node:child_process";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = join(__dirname, "..");
 
 const INDEX_NAME = process.env.WORKSHOP_PINECONE_INDEX ?? "handbook";
 const NAMESPACE = process.env.WORKSHOP_PINECONE_NAMESPACE ?? "workshop-shared";
@@ -58,7 +59,7 @@ const THEME = {
 
 function loadEnvLocal() {
   for (const name of [".env.local", ".env"]) {
-    const path = join(__dirname, name);
+    const path = join(ROOT, name);
     if (!existsSync(path)) continue;
     for (const line of readFileSync(path, "utf8").split("\n")) {
       const trimmed = line.trim();
@@ -82,7 +83,7 @@ function loadEnvLocal() {
 
 function loadCorpus() {
   return JSON.parse(
-    readFileSync(join(__dirname, "handbook-corpus.json"), "utf8"),
+    readFileSync(join(ROOT, "data/handbook-corpus.json"), "utf8"),
   );
 }
 
@@ -398,7 +399,7 @@ async function main() {
   const missing = ids.filter((id) => !records[id]?.values?.length);
   if (missing.length) {
     throw new Error(
-      `Missing vectors in Pinecone: ${missing.join(", ")}. Run pnpm --dir workshops seed first.`,
+      `Missing vectors in Pinecone: ${missing.join(", ")}. Run npm run seed first.`,
     );
   }
 

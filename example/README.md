@@ -4,7 +4,28 @@ Both examples search the same **employee handbook** vectors in Pinecone. The dif
 
 ## RAG (`example/rag/`)
 
-**Retrieval-Augmented Generation** — retrieval tools run **in-process** inside your app.
+Two patterns over the same Pinecone index — **who decides to retrieve?**
+
+### Deterministic RAG (`deterministic-chain.ts`)
+
+Fixed pipeline every time: **always retrieve → prompt → LLM**.
+
+```
+User question → searchDocuments() → context in prompt → LLM answer
+```
+
+- Host always runs retrieval; model never chooses tools
+- Matches slide 22: `SystemMessage` + `HumanMessage` with `{context}`
+- Best for: doc Q&A bots, predictable latency, citations on every request
+
+```bash
+npm run example:rag:deterministic
+npm run example:rag:deterministic -- "How many PTO days do full-time employees get?"
+```
+
+### Agentic RAG (`langchain-handbook-agent.ts`)
+
+Model decides **if/when** to call retrieval tools.
 
 ```
 User question → LangChain agent → search_documents() → Pinecone → LLM answer
@@ -12,7 +33,7 @@ User question → LangChain agent → search_documents() → Pinecone → LLM an
 
 - Tools are LangChain `tool()` bindings (TypeScript functions in memory)
 - Your code owns the agent loop (`bindTools` → invoke → `ToolMessage`)
-- Best for: apps you control end-to-end (API routes, scripts, agents)
+- Best for: mixed intents (policy Q&A + optional actions)
 
 ```bash
 npm run example:rag
