@@ -25,10 +25,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 import { loadEnv } from "../shared/load-env.js";
-import {
-  getDocumentById,
-  searchDocuments,
-} from "../shared/handbook-store.js";
+import { getDocumentById, searchDocuments } from "../shared/handbook-store.js";
 
 loadEnv();
 

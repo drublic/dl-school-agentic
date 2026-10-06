@@ -1,7 +1,10 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { Pinecone } from "@pinecone-database/pinecone";
-import type { RecordMetadata, ScoredPineconeRecord } from "@pinecone-database/pinecone";
+import type {
+  RecordMetadata,
+  ScoredPineconeRecord,
+} from "@pinecone-database/pinecone";
 import OpenAI from "openai";
 import { ROOT } from "./load-env.js";
 import type {
@@ -94,7 +97,7 @@ export async function searchDocuments({
 /** Fetch a single handbook chunk by Pinecone ID (shared by RAG + MCP examples). */
 export async function getDocumentById(id: string): Promise<string> {
   const ns = await getNamespace();
-  const fetched = await ns.fetch([id]);
+  const fetched = await ns.fetch({ ids: [id] });
   const record = fetched.records?.[id];
   const chunkText = record?.metadata?.chunk_text;
   if (typeof chunkText === "string") {
